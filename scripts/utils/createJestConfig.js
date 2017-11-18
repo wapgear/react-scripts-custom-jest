@@ -62,7 +62,10 @@ module.exports = (resolve, rootDir, isEjecting) => {
     'coverageReporters',
     'coverageThreshold',
     'snapshotSerializers',
-    'moduleDirectories'
+    'moduleDirectories',
+    'transform',
+    'testMatch',
+    'moduleFileExtensions'
   ];
   if (overrides) {
     supportedKeys.forEach(key => {
