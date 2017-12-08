@@ -65,7 +65,10 @@ module.exports = (resolve, rootDir, isEjecting) => {
     'moduleDirectories',
     'transform',
     'testMatch',
-    'moduleFileExtensions'
+    'moduleFileExtensions',
+    'mapCoverage',
+    'testPathIgnorePatterns',
+    'testRegex'
   ];
   if (overrides) {
     supportedKeys.forEach(key => {
