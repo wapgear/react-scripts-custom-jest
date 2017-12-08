@@ -31,14 +31,14 @@ module.exports = (resolve, rootDir, isEjecting) => {
     testEnvironment: 'node',
     testURL: 'http://localhost',
     transform: {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js",
       '^.+\\.(js|jsx|mjs)$': isEjecting
         ? '<rootDir>/node_modules/babel-jest'
         : resolve('config/jest/babelTransform.js'),
       '^.+\\.css$': resolve('config/jest/cssTransform.js'),
       '^(?!.*\\.(js|jsx|mjs|css|json)$)': resolve(
         'config/jest/fileTransform.js'
-      ),
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+      )
     },
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$'],
     moduleNameMapper: {
