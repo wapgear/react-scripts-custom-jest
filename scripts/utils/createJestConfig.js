@@ -33,7 +33,7 @@ module.exports = (resolve, rootDir, isEjecting) => {
     transform: {
       '^.+\\.(css|less)$': resolve('config/jest/cssTransform.js'),
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js",
-      '^.+\\.(js|jsx|mjs)$': resolve('config/jest/babelTransform.js'),
+      '^.+\\.(js|jsx|mjs)$': '<rootDir>/node_modules/babel-jest',
       '^(?!.*\\.(js|jsx|mjs|css|json)$)': resolve(
         'config/jest/fileTransform.js'
       )
